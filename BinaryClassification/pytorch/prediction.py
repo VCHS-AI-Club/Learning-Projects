@@ -83,7 +83,7 @@ print(net)
 criterion: nn.BCEWithLogitsLoss = nn.BCEWithLogitsLoss()
 optimizer: optim.Adam = optim.Adam(net.parameters())
 
-num_epochs: t.Final[int] = 1001  # set number of training cyc;es
+num_epochs: t.Final[int] = 1001  # set number of training cycles
 
 for epoch in range(num_epochs):
     net.train()
