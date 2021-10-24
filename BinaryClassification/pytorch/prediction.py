@@ -41,7 +41,7 @@ X: np.ndarray = np.asarray(
     ]
 )
 Y: np.ndarray = np.asarray(df["output"])
-num_features: tuple(int) = X.shape[1]
+num_features: tuple[int] = X.shape[1]
 output_size: int = 1  # binary, so either 0 or 1
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
 # print(X_train[:20])
@@ -83,7 +83,7 @@ print(net)
 criterion: nn.BCEWithLogitsLoss = nn.BCEWithLogitsLoss()
 optimizer: optim.Adam = optim.Adam(net.parameters())
 
-num_epochs: t.Final[int] = 1001  # set number of training cyc;es
+num_epochs: t.Final[int] = 1001  # set number of training cycles
 
 for epoch in range(num_epochs):
     net.train()
